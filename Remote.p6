@@ -77,9 +77,9 @@ sub localman {
     react {
         whenever $connlocal -> $local {
             my @localinfo = $local.peer-host,':',$local.peer-port;
-            my $start     = Supplier.new;
-            my $checkcli = $start.Supply;
-            my $check     = '';
+            #my $start     = Supplier.new;
+            #my $checkcli = $start.Supply;
+            #my $check     = '';
             say |@localinfo, ' local has connected.';
             $servavail = True;
             start processdata($local);
